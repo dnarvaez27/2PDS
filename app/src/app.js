@@ -2,7 +2,8 @@
     let app = angular.module( '2pdsApp', [
         'ui.router',
         'mainModule',
-        'servicesModule'
+        'servicesModule',
+        'projectModule'
     ] );
 
     app.controller( 'menuController', [ '$scope', '$state',
@@ -16,7 +17,7 @@
                         $state.go( 'services' );
                         break;
                     case 2:
-                        // Project
+                        $state.go( 'project' );
                         break;
                     case 3:
                         // About
@@ -27,7 +28,6 @@
                 }
                 setMenuOn( numMenu );
             };
-            $scope.goMenu( 0 );
         } ] );
 
     function setMenuOn( numMenu ) {

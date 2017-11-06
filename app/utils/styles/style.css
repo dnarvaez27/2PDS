@@ -120,12 +120,58 @@ html {
     padding: 20px;
 }
 
-.menu-on{
+.menu-on {
     background-color: #23527c;
     color: #FFFFFF;
 }
 
-.menu a:hover{
+.menu a:hover {
     background-color: #23527c;
     color: #FFFFFF;
+}
+
+.service-circle {
+    /*border-radius: 50%;*/
+    background-color: #212121;
+    color: #FFFFFF;
+    padding: 15px;
+    height: 70%;
+
+    display: grid;
+    grid-template-rows: 0fr 4fr 0fr;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 10px;
+    padding: 20px;
+}
+
+.btn-service {
+
+}
+
+.project-container {
+    padding: 20px;
+}
+
+.member img{
+    height: 100px;
+    width: 100px;
+}
+
+.member{
+    text-align: center;
+    padding: 15px;
+}
+
+.member p{
+    text-align: justify;
+}
+
+.members-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }

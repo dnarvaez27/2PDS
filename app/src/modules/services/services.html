@@ -1,5 +1,9 @@
-<div class="full-size">
-    <div>
-
+<div class="full-size services-container">
+    <div ng-repeat="service in services">
+        <div class="service-circle">
+            <h2>{{service.name}}</h2>
+            <p>{{service.description}}</p>
+            <button class="btn btn-default center-block btn-service">Learn More</button>
+        </div>
     </div>
 </div>

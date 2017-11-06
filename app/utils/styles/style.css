@@ -16,7 +16,7 @@
     height: 100%;
 }
 
-.menu {
+#menu {
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -29,10 +29,6 @@
     padding: 20px 30px;
     cursor: pointer;
     display: inline-block;
-}
-
-.menu-button-icon {
-    padding: 0 5px;
 }
 
 .account {
@@ -125,13 +121,9 @@ html {
     color: #FFFFFF;
 }
 
-.menu a:hover {
+#menu a:hover {
     background-color: rgba(35, 82, 124, 0.74);
     color: #FFFFFF;
-}
-
-.menu a {
-
 }
 
 .service-circle {
@@ -162,8 +154,8 @@ html {
 }
 
 .member img {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
 }
 
 .member {
@@ -229,4 +221,111 @@ html {
     left: 50%;
     position: relative;
     transform: translateX(-50%);
+}
+
+.card {
+    box-shadow: 0 2px 10px -4px black;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar-layout {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.sidebar {
+    background-color: #212121;
+    padding: 15px;
+}
+
+.profile-content {
+    /*padding: 15px;*/
+    height: 100%;
+}
+
+.profile-content > * {
+    height: 100%;
+}
+
+.text-sidebar {
+    color: #FFFFFF
+}
+
+.sidebar-buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+
+.patient-list-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+
+.patient-item {
+    /*text-align: center;*/
+    /*padding: 15px;*/
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.patient-item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.pre-scrollable {
+    overflow-y: scroll;
+    background-color: transparent;
+    min-height: 100%;
+}
+
+.pre-scrollable-no-x {
+    overflow-y: scroll;
+    background-color: transparent;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+.style-2::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+}
+
+.style-2::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #212121;
+}
+
+.style-2::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.tabla-pacientes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px;
+}
+
+.tabla-pacientes-container {
+    height: 85%;
+}
+
+.tabla-headers {
+    box-shadow: 0 2px 4px -2px;
+}
+
+.img-menu {
+    height: 10%;
+    width: 10%;
+    display: inline-block;
+}
+
+.filter-patient {
+    margin: 5px 0;
 }

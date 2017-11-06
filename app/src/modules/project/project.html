@@ -1,23 +1,21 @@
 <div class="full-size project-container">
-    <div class="">
-        <h1>Acerca</h1>
+    <div class="card">
+        <h1>About</h1>
         <p>
-            Este proyecto es realizado para el curso de Diesño e Innovación de Productos en TI
-            dado por la Universidad de Los Andes.
+            This project is part of the course ISIS-2007 "Diseño e Innovación de Productos en TI" in the Unversity of
+            Los Andes
         </p>
     </div>
 
-    <div class="">
-        <h1>El Equipo</h1>
+    <div class="card">
+        <h1>Team</h1>
         <div class="members-container">
             <div class="member" ng-repeat="member in team">
-                <img class="img-circle" src=""/>
+                <img class="img-circle" ng-src="{{member.img}}">
                 <h4>{{member.name}}</h4>
                 <h5>{{member.title}}</h5>
                 <p>{{member.description}}</p>
             </div>
         </div>
     </div>
-
-
 </div>

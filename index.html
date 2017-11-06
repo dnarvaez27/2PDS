@@ -30,22 +30,22 @@
     <script type="text/javascript" src="app/src/modules/project/project.ctrl.js"></script>
     <script type="text/javascript" src="app/src/modules/account/account.mod.js"></script>
     <script type="text/javascript" src="app/src/modules/account/account.ctrl.js"></script>
+    <script type="text/javascript" src="app/src/modules/profile/profile.mod.js"></script>
+    <script type="text/javascript" src="app/src/modules/profile/profile.ctrl.js"></script>
+    <script type="text/javascript" src="app/src/modules/patient/patient.mod.js"></script>
+    <script type="text/javascript" src="app/src/modules/patient/patient.ctrl.js"></script>
     <script type="text/javascript" src="app/src/app.js"></script>
 
 </head>
 <body class="full-size" ng-controller="menuController">
     <div class="header">
         <div class="logo"></div>
-        <div class="menu">
-            <a id="menu-item-0" class="menu-button" ng-click="goMenu(0)">Home</a>
-            <a id="menu-item-1" class="menu-button" ng-click="goMenu(1)">Services</a>
-            <a id="menu-item-2" class="menu-button" ng-click="goMenu(2)">Project</a>
-            <!--<a id="menu-item-3" class="menu-button" ng-click="goMenu(3)">About</a>-->
-        </div>
+        <div id="menu" ng-include="menusrc"></div>
+        <!--<ng-include id="menu" src="menusrc"> </ng-include>-->
         <div class="account">
-            <span class="fa fa-sign-in menu-button">
-                <a class="menu-button-icon" ng-click="goMenu(4)">Account</a>
-            </span>
+            <a class="menu-button" ng-click="goMenu(4)">
+                <span id="account" class="fa fa-sign-in">Account</span>
+            </a>
         </div>
     </div>
 

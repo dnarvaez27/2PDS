@@ -1,0 +1,18 @@
+<div class="tabla-pacientes-container">
+    <div class="tabla-pacientes tabla-headers">
+        <b>Name</b>
+        <b>ID</b>
+        <b>Last</b>
+        <b>Type</b>
+    </div>
+
+    <div class="full-size pre-scrollable style-2">
+        <div class="tabla-pacientes patient-item"
+             ng-repeat="patient in patients | filter: Data.filter:strict" ng-click="clickPatient(patient.id)">
+            <span>{{patient.name}}</span>
+            <span>{{patient.id}}</span>
+            <span>{{patient.last | date}}</span>
+            <span>{{patient.type}}</span>
+        </div>
+    </div>
+</div>

@@ -4,11 +4,16 @@
         'mainModule',
         'servicesModule',
         'projectModule',
-        'accountModule'
+        'accountModule',
+        'profileModule',
+        'patientModule'
     ] );
+
 
     app.controller( 'menuController', [ '$scope', '$state',
         function ( $scope, $state ) {
+            $scope.menusrc = 'app/src/menu.html';
+
             $scope.goMenu = function ( numMenu ) {
                 switch ( numMenu ) {
                     case 0:

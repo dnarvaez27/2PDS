@@ -5,14 +5,15 @@
                     function ( $stateProvider, $urlRouterProvider ) {
                         $urlRouterProvider.otherwise( '/home' );
 
-                        $stateProvider.state( 'home', {
-                            url: '/home',
-                            views: {
-                                'mainView': {
-                                    templateUrl: 'app/src/modules/home/home.html',
-                                    controller: 'mainCtrl'
+                        $stateProvider
+                            .state( 'home', {
+                                url: '/home',
+                                views: {
+                                    'mainView': {
+                                        templateUrl: 'app/src/modules/home/home.html',
+                                        controller: 'mainCtrl'
+                                    }
                                 }
-                            }
-                        } );
+                            } );
                     } ] );
 })( window.angular );

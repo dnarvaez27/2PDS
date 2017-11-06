@@ -1,12 +1,13 @@
 (function () {
     let app = angular.module( '2pdsApp', [
         'ui.router',
-        'mainModule',
-        'servicesModule',
-        'projectModule',
+
+        'patientModule',
         'accountModule',
+        'projectModule',
+        'servicesModule',
         'profileModule',
-        'patientModule'
+        'mainModule',
     ] );
 
 

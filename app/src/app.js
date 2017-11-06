@@ -1,0 +1,51 @@
+(function () {
+    let app = angular.module( '2pdsApp', [
+        'ui.router',
+        'mainModule',
+        'servicesModule'
+    ] );
+
+    app.controller( 'menuController', [ '$scope', '$state',
+        function ( $scope, $state ) {
+            $scope.goMenu = function ( numMenu ) {
+                switch ( numMenu ) {
+                    case 0:
+                        $state.go( 'home' );
+                        break;
+                    case 1:
+                        $state.go( 'services' );
+                        break;
+                    case 2:
+                        // Project
+                        break;
+                    case 3:
+                        // About
+                        break;
+                    case 4:
+                        // Account
+                        break;
+                }
+                setMenuOn( numMenu );
+            };
+            $scope.goMenu( 0 );
+        } ] );
+
+    function setMenuOn( numMenu ) {
+        for ( let i = 0; i < 5; i++ ) {
+            if ( i !== numMenu ) {
+                $( '#menu-item-' + i ).toggleClass( 'menu-on', false )
+            }
+        }
+        $( '#menu-item-' + numMenu ).toggleClass( 'menu-on', true )
+
+        $( document ).ready( function () {
+            $( "html, body" ).animate( {
+                scrollTop: 0
+            }, 800 );
+        } );
+    }
+
+    app.config( [ '$qProvider', function ( $qProvider ) {
+        $qProvider.errorOnUnhandledRejections( false );
+    } ] );
+})( window.angular );

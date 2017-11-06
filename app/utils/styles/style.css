@@ -1,9 +1,12 @@
+/*BEGIN Banner*/
 .header {
     box-shadow: 0 2px 3px -2px rgba(0, 0, 0, 50);
     position: fixed;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.95);
     height: 10%;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
@@ -28,7 +31,7 @@
     display: inline-block;
 }
 
-.menu-button-icon{
+.menu-button-icon {
     padding: 0 5px;
 }
 
@@ -38,4 +41,91 @@
     top: 50%;
     transform: translateY(-50%);
     margin-right: 20px;
+}
+
+/*END Banner*/
+
+/*BEGIN Content*/
+html {
+    height: 100%;
+}
+
+.content {
+    top: 10%;
+    width: 100%;
+    height: 90%;
+    padding-top: 5%;
+}
+
+.full-size {
+    height: 100%;
+    width: 100%;
+}
+
+.box {
+    text-align: center;
+    height: 100%;
+    display: grid;
+    /*margin-bottom: 10px;*/
+    /*box-shadow: 0 1px 7px -1px rgba(0, 0, 0, 0.5);*/
+}
+
+.box-separator {
+    width: 100%;
+    background-color: white;
+    padding: 50px 0;
+    text-align: center;
+    z-index: 10;
+    box-shadow: 0 0 11px -4px black;
+    display: inline-block;
+}
+
+.box-1 {
+    background: url("../imgs/box1.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.box-2 {
+    background: url("../imgs/box2.1.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.box-text-light {
+    color: white;
+    text-shadow: 0 1px 3px black;
+    font-weight: bold;
+}
+
+.box-content > * {
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+}
+
+.box-text-dark {
+    color: #212121;
+    text-shadow: 0 1px 3px black;
+    font-weight: bold;
+}
+
+#mainView {
+    height: 100%;
+    width: 100%;
+}
+
+.footer {
+    width: 100%;
+    bottom: 0;
+    display: inline-block;
+    padding: 20px;
+}
+
+.menu-on{
+    background-color: #23527c;
+    color: #FFFFFF;
+}
+
+.menu a:hover{
+    background-color: #23527c;
+    color: #FFFFFF;
 }

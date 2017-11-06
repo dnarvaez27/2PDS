@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="2pdsApp">
 <head>
     <!--Metadata-->
     <meta charset="UTF-8">
@@ -21,24 +21,32 @@
     <script type="text/javascript" src="app/utils/libs/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="app/utils/libs/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
+    <!--Angular Modules-->
+    <script type="text/javascript" src="app/src/modules/home/home.mod.js"></script>
+    <script type="text/javascript" src="app/src/modules/home/home.ctrl.js"></script>
+    <script type="text/javascript" src="app/src/modules/services/services.mod.js"></script>
+    <script type="text/javascript" src="app/src/modules/services/services.ctrl.js"></script>
+    <script type="text/javascript" src="app/src/app.js"></script>
+
 </head>
-<body>
+<body class="full-size" ng-controller="menuController">
     <div class="header">
         <div class="logo"></div>
         <div class="menu">
-            <a class="menu-button">Home</a>
-            <a class="menu-button">Servicios</a>
-            <a class="menu-button">El Proyecto</a>
-            <a class="menu-button">Acerca</a>
+            <a id="menu-item-0" class="menu-button" ng-click="goMenu(0)">Home</a>
+            <a id="menu-item-1" class="menu-button" ng-click="goMenu(1)">Services</a>
+            <a id="menu-item-2" class="menu-button" ng-click="goMenu(2)">Project</a>
+            <a id="menu-item-3" class="menu-button" ng-click="goMenu(3)">About</a>
         </div>
         <div class="account">
-            <span class="fa fa-sign-in menu-button"><a class="menu-button-icon">Account</a></span>
+            <span class="fa fa-sign-in menu-button">
+                <a class="menu-button-icon" ng-click="goMenu(4)">Account</a>
+            </span>
         </div>
     </div>
 
-    <div class="content">
-
+    <div class="content full-size">
+        <div class="full-size" id="mainView" ui-view="mainView"></div>
     </div>
-
 </body>
 </html>

@@ -38,7 +38,7 @@
 
                 let res = verifyUser( user, pswd );
                 if ( res ) {
-                    $state.go( 'profile', { user: res } );
+                    $state.go( 'profile', { userLogin: res.user, user: res } );
                 }
             };
 

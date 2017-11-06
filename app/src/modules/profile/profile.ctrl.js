@@ -30,7 +30,11 @@
                 // TODO: Color de boton
             };
 
-            $scope.goToPatients();
+            $scope.goToProfile = function () {
+                $state.go( 'profile' );
+            };
+
+            // $scope.goToPatients();
         }
     ] );
 })( angular );

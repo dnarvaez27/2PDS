@@ -8,7 +8,7 @@
 
     <div class="full-size pre-scrollable style-2">
         <div class="tabla-pacientes patient-item"
-             ng-repeat="patient in patients | filter: Data.filter:strict" ng-click="clickPatient(patient.id)">
+             ng-repeat="patient in patients | filter: Data.data: strict" ng-click="clickPatient($index)">
             <span>{{patient.name}}</span>
             <span>{{patient.id}}</span>
             <span>{{patient.last | date}}</span>

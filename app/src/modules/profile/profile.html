@@ -1,12 +1,14 @@
 <div class="full-size">
     <div class="profile-content">
         <div class="sidebar-layout">
-            <div class="sidebar">
-                <div>
-                    <div ui-view="sidebarView"></div>
+            <div class="sidebar full-size">
+                <div class="full-size">
+                    <div class="full-size" ui-view="sidebarView"></div>
                 </div>
             </div>
-            <div ui-view="profileView"></div>
+            <div ui-view="profileView">
+                <h1>Statistics</h1>
+            </div>
         </div>
     </div>
 </div>

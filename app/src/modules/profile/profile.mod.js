@@ -7,8 +7,9 @@
 
                         $stateProvider
                             .state( 'profile', {
-                                url: '/profile',
+                                url: '/profile/:userLogin',
                                 params: {
+                                    userLogin: null,
                                     user: null
                                 },
                                 views: {

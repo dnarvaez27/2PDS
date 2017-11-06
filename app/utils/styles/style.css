@@ -324,8 +324,58 @@ html {
     height: 10%;
     width: 10%;
     display: inline-block;
+    cursor: pointer;
 }
 
 .filter-patient {
     margin: 5px 0;
+}
+
+.patient-detail-container {
+    padding: 15px;
+}
+
+.text-sidebar > a {
+    color: #ebcccc;
+}
+
+.exam-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.exam {
+    padding: 15px;
+    margin: 10px;
+    cursor: pointer;
+
+    border: 1px solid rgba(0,0,0,0.25);
+    border-radius: 5px;
+    min-height: 130px;
+}
+
+.exam:hover {
+    background-color: rgba(150, 150, 150, 0.2);
+    color: #212121 !important;
+}
+
+hr {
+    margin: 5px;
+}
+
+.info-card {
+    color: #969696;
+}
+
+.bubble {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}
+
+.single-exam-container {
+    position: relative;
 }

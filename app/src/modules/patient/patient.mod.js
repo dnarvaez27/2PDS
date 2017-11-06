@@ -3,7 +3,7 @@
 
     mod.config( [ '$stateProvider', '$urlRouterProvider',
                     function ( $stateProvider, $urlRouterProvider ) {
-                        $urlRouterProvider.otherwise( '/patients' );
+                        // $urlRouterProvider.otherwise( '/patients' );
 
                         $stateProvider
                             .state( 'patients', {
@@ -17,6 +17,23 @@
                                     'sidebarView': {
                                         templateUrl: 'app/src/modules/patient/patients.filter.html',
                                         controller: 'patientsCtrl'
+                                    }
+                                }
+                            } )
+                            .state( 'patient', {
+                                url: '/patients/:id',
+                                parent: 'profile',
+                                params: {
+                                    id: null,
+                                },
+                                views: {
+                                    'profileView': {
+                                        templateUrl: 'app/src/modules/patient/detail/patients.detail.html',
+                                        controller: 'patientDetailCtrl'
+                                    },
+                                    'sidebarView': {
+                                        templateUrl: 'app/src/modules/patient/detail/patients.detail.sidebar.html',
+                                        controller: 'patientDetailCtrl'
                                     }
                                 }
                             } );

@@ -126,8 +126,12 @@ html {
 }
 
 .menu a:hover {
-    background-color: #23527c;
+    background-color: rgba(35, 82, 124, 0.74);
     color: #FFFFFF;
+}
+
+.menu a {
+
 }
 
 .service-circle {
@@ -157,21 +161,72 @@ html {
     padding: 20px;
 }
 
-.member img{
+.member img {
     height: 100px;
     width: 100px;
 }
 
-.member{
+.member {
     text-align: center;
     padding: 15px;
 }
 
-.member p{
+.member p {
     text-align: justify;
 }
 
 .members-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+}
+
+.account-container {
+    background: url("../imgs/box1.jpg") no-repeat center;
+    background-size: cover;
+    height: 100%;
+    top: 10%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.account-info {
+    background-color: rgba(255, 255, 255, 0.9);
+    /*height: 70%;*/
+    width: 30%;
+    top: 50%;
+    position: relative;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    padding: 15px;
+}
+
+.form-group label {
+    text-align: center;
+}
+
+.logo-login {
+    background: url(../imgs/2pds.png) no-repeat center;
+    background-size: contain;
+    width: 55%;
+    height: 40%;
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.long-button {
+    width: 100%;
+}
+
+.network {
+    background: url("../imgs/network.png") no-repeat center;
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
 }

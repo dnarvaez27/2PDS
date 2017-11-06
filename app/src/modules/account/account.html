@@ -1,0 +1,26 @@
+<div class="full-size">
+    <div class="account-container">
+        <div class="account-info">
+            <div class="logo-login"></div>
+            <p class="center-block text-center">
+                Login or SignUp to 2PDS to access all of its functionality
+            </p>
+            <form ng-submit="onSubmit()">
+                <div class="form-group">
+                    <label class="center-block" for="username">Username</label>
+                    <input class="form-control text-center" id="username" type="text" placeholder="User">
+                </div>
+                <div class="form-group">
+                    <label class="center-block" for="password">Password</label>
+                    <input class="form-control text-center" id="password" type="password" placeholder="Password">
+                </div>
+                <div class="center-block text-center">
+                    <button type="submit" class="long-button btn btn-success">Login</button>
+                </div>
+            </form>
+            <br>
+            <span class="center-block text-center">Don't have an account yet? Click below to create one</span>
+            <button ng-click="goToSignUp()" class="long-button btn btn-primary">SignUp</button>
+        </div>
+    </div>
+</div>

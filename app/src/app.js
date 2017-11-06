@@ -3,7 +3,8 @@
         'ui.router',
         'mainModule',
         'servicesModule',
-        'projectModule'
+        'projectModule',
+        'accountModule'
     ] );
 
     app.controller( 'menuController', [ '$scope', '$state',
@@ -24,6 +25,7 @@
                         break;
                     case 4:
                         // Account
+                        $state.go( 'account' );
                         break;
                 }
                 setMenuOn( numMenu );
@@ -33,15 +35,13 @@
     function setMenuOn( numMenu ) {
         for ( let i = 0; i < 5; i++ ) {
             if ( i !== numMenu ) {
-                $( '#menu-item-' + i ).toggleClass( 'menu-on', false )
+                $( '#menu-item-' + i ).toggleClass( 'menu-on', false );
             }
         }
-        $( '#menu-item-' + numMenu ).toggleClass( 'menu-on', true )
+        $( '#menu-item-' + numMenu ).toggleClass( 'menu-on', true );
 
         $( document ).ready( function () {
-            $( "html, body" ).animate( {
-                scrollTop: 0
-            }, 800 );
+            $( 'html, body' ).animate( { scrollTop: 0 }, 800 );
         } );
     }
 

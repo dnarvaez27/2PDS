@@ -14,6 +14,7 @@
     app.controller( 'menuController', [ '$scope', '$state',
         function ( $scope, $state ) {
             $scope.menusrc = 'app/src/menu.html';
+            $scope.dialogsrc = '';
 
             $scope.goMenu = function ( numMenu ) {
                 switch ( numMenu ) {

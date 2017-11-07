@@ -42,7 +42,6 @@
     <div class="header">
         <div class="logo"></div>
         <div id="menu" ng-include="menusrc"></div>
-        <!--<ng-include id="menu" src="menusrc"> </ng-include>-->
         <div class="account">
             <a class="menu-button" ng-click="goMenu(4)">
                 <span id="account" class="fa fa-sign-in">Account</span>
@@ -52,6 +51,11 @@
 
     <div class="content full-size">
         <div class="full-size" id="mainView" ui-view="mainView"></div>
+    </div>
+
+    <div id="modal" class="modal fade" role="dialog">
+        <div ng-include="dialogsrc">
+        </div>
     </div>
 </body>
 </html>

@@ -3,7 +3,7 @@
 
     <div class="exam-container">
         <div class="single-exam-container" ng-repeat="exam in currentPatient.exams">
-            <div class="exam">
+            <div class="exam" ng-click="seeExam(exam)">
                 <div class="bubble" ng-show="exam.status !== -1"
                      ng-style="exam.status === 2? {backgroundColor: '#C12E2A'} :
                                exam.status === 1 ?{backgroundColor: '#DCB40A'} : {backgroundColor: '#A7D800'}">
@@ -12,9 +12,17 @@
                 <hr>
                 <div class="info-card">
                     <small>
-                        <small><span>Date: {{exam.date | date}}</span></small>
+                        <small>
+                            <span>
+                                Date: {{exam.status !== -1 ? exam.date : ''| date}}
+                            </span>
+                        </small>
                         <br>
-                        <small><span>Status: {{exam.status===0?'Sucess':exam.status==1?'Pending':'Fail'}}</span></small>
+                        <small>
+                            <span>
+                                Status: {{getStatus(exam.status)}}
+                            </span>
+                        </small>
                     </small>
                 </div>
             </div>

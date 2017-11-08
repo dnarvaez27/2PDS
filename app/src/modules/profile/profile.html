@@ -3,11 +3,13 @@
         <div class="sidebar-layout">
             <div class="sidebar full-size">
                 <div class="full-size">
-                    <div class="full-size" ui-view="sidebarView"></div>
+                    <div class="full-size" ui-view="sidebarView">
+                        <div class="full-size" ng-include="'app/src/modules/profile/profile.sidebar.html'"></div>
+                    </div>
                 </div>
             </div>
             <div ui-view="profileView">
-                <h1>Statistics</h1>
+                <div class="full-size" ng-include="'app/src/modules/profile/profile.statistics.html'"></div>
             </div>
         </div>
     </div>

@@ -223,61 +223,122 @@
             temp.mail = 'pac@email.com';
             temp.type = 'P1';
             temp.exams = [
-                {
-                    'name': 'Oximetría de pulso',
-                    'status': 0,
-                    'results': { prbpm: 23, spo2: 132 },
-                    'date': new Date(),
-                    'file': 'oximetria.html'
-                },
-                {
-                    'name': 'Rayos X de Tórax',
-                    'status': 1,
-                    'results': '',
-                    'date': new Date()
-                },
-                {
-                    'name': 'Ecocardiograma (ECG, ultrasonido cardiaco o sonograma)',
-                    'status': 1,
-                    'results': '', 'date': new Date()
-                },
-                {
-                    'name': 'Espirometría Simple',
-                    'status': 2,
-                    'results': '', 'date': new Date(),
-                    'file': 'espirometria.html'
-                },
-                {
-                    'name': 'Caminata de 6 minutos',
-                    'status': 1,
-                    'results': '', 'date': new Date()
-                },
-                {
-                    'name': 'Doppler o Triplex Arterial Venoso',
-                    'status': -1,
-                    'results': '', 'date': new Date()
-                },
-                {
-                    'name': 'Electrocardiograma (EKG)',
-                    'status': 1,
-                    'results': '', 'date': new Date(),
-                    'file': 'ecg.html'
-                },
-                {
-                    'name': 'Gammagrafía pulmonar de ventilación/perfusión',
-                    'status': 0,
-                    'results': '', 'date': new Date()
-                },
-                {
-                    'name': 'Ecocardiograma Transesofágico',
-                    'status': 2,
-                    'results': '', 'date': new Date()
-                },
-                {
-                    'name': 'Espirometría Forzada',
-                    'status': -1,
-                    'results': '', 'date': new Date()
-                }
+                [
+                    {
+                        name: "Oximetría de pulso",
+                        status :0,
+                        results: {PRbpm:28, SpO2: 120},
+                        date: new Date(),
+                        file: "oximetria.html"
+                    },
+                    {
+                        name: "Rayos X de Tórax",
+                        status : 1,
+                        results: {},
+                        date: new Date(),
+                        file: ""
+                    },
+                    {
+                        name: "Electrocardiograma (EKG)",
+                        status :2,
+                        results: {},
+                        date: new Date(),
+                        file: ""
+                    },
+                    {
+                        name: "Ecocardiograma (ECG, ultrasonido cardiaco o sonograma)",
+                        status :2,
+                        results: {freq_card: 60, ritm_card: 128, incl_cor: 12, hallazgos: { hipertrofia: false, crec_auriculas: true, ventriculos: true}},
+                        date: new Date(),
+                        file: "ecg.html"
+                    },
+                    {
+                        name: "Espirometría	",
+                        status :2,
+                        results: {vol_corr: 132, vol_ins: 45, vol_esp: 38},
+                        date: new Date(),
+                        file: "espirometria.html"
+                    },
+                    {
+                        name: "Caminata de 6 minutos",
+                        status :1,
+                        results: {},
+                        date: new Date(),
+                        file: ""
+                    },
+                    {
+                        name: "Doppler o Triplex Arterial Venoso",
+                        status :-1,
+                        results: {},
+                        date: new Date(),
+                        file: ""
+                    }
+                ],
+                [
+                    {
+                        name: "Ecocardiograma Transesofágico",
+                        status:  -1,
+                        results: {},
+                        date: new Date(),
+                        file : ""
+                    },
+                    {
+                        name: "Gammagrafía pulmonar de ventilación/perfusión",
+                        status:  -1,
+                        results: {},
+                        date: new Date(),
+                        file : ""
+                    },
+                    {
+                        name: "Tomografía Axial Computarizada de Tórax (TAC)",
+                        status:  -1,
+                        results: {},
+                        date: new Date(),
+                        file : ""
+                    },
+                    {
+                        name: "Imagen por Resonancia Magnética",
+                        status:  -1,
+                        results: {},
+                        date: new Date(),
+                        file : ""
+                    },
+                    {
+                        name: "Cateterismo cardíaco derecho	",
+                        status:  -1,
+                        results: {},
+                        date: new Date(),
+                        file : ""
+                    },
+                    {
+                        name: "Arteriografía pulmonar",
+                        status:  1,
+                        results: {},
+                        date: new Date(),
+                        file : ""
+                    },
+                    {
+                        name: "Determinación de Clase Funcional",
+                        status:  -1,
+                        results: {},
+                        date: new Date(),
+                        file : ""
+                    },
+                    {
+                        name: "Exámenes genéticos",
+                        status:  -1,
+                        results: {},
+                        date: new Date(),
+                        file : ""
+                    },
+                    {
+                        name: "Biopsia de pulmón",
+                        status:  -1,
+                        results: {},
+                        date: new Date(),
+                        file : ""
+                    }
+                ]
             ];
 
             if ( !temp.img || temp.img === '' ) {

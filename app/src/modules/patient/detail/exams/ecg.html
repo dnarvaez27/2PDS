@@ -1,17 +1,17 @@
 <div>
     <div class="form-group">
         <label for="freq_card">Frecuencia Cardiaca (bpm)</label>
-        <input id="freq_card" class="form-control" placeholder="Frecuencia Cardiaca (bpm)">
+        <input id="freq_card" class="form-control" placeholder="Frecuencia Cardiaca (bpm)" ng-value="examen.results.freq_card">
     </div>
 
     <div class="form-group">
         <label for="ritm_card">Ritmo Cardiaco</label>
-        <input id="ritm_card" class="form-control" placeholder="Ritmo Cardiaco">
+        <input id="ritm_card" class="form-control" placeholder="Ritmo Cardiaco" ng-value="examen.results.ritm_card">
     </div>
 
     <div class="form-group">
         <label for="incl_cor">Inclinación del eje del corazón</label>
-        <input id="incl_cor" class="form-control" placeholder="Inclinación del eje del corazón">
+        <input id="incl_cor" class="form-control" placeholder="Inclinación del eje del corazón" ng-value="examen.results.incl_cor">
     </div>
 
     <div class="form-group">
@@ -19,17 +19,17 @@
         <div class="form-group">
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" value="">
+                    <input type="checkbox" ng-model="examen.results.hallazgos.hipertrofia">
                     Hipertrofias
                 </label>
 
                 <label>
-                    <input type="checkbox" value="">
+                    <input type="checkbox" ng-model="examen.results.hallazgos.crec_auriculas">
                     Crecimiento de auriculas
                 </label>
 
                 <label>
-                    <input type="checkbox" value="">
+                    <input type="checkbox" ng-model="examen.results.hallazgos.ventriculos">
                     Ventriculos
                 </label>
             </div>

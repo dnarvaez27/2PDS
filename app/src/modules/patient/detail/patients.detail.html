@@ -1,32 +1,65 @@
 <div class="full-size patient-detail-container pre-scrollable style-2">
     <h1>Exams</h1>
 
-    <div class="exam-container">
-        <div class="single-exam-container" ng-repeat="exam in currentPatient.exams">
-            <div class="exam" ng-click="seeExam(exam)">
-                <div class="bubble" ng-show="exam.status !== -1"
-                     ng-style="exam.status === 2? {backgroundColor: '#C12E2A'} :
+    <div class="card">
+        <h3>Non-Intrusive</h3>
+        <div class="exam-container">
+            <div class="single-exam-container" ng-repeat="exam in currentPatient.exams[0]">
+                <div class="exam" ng-click="seeExam(exam)">
+                    <div class="bubble" ng-show="exam.status !== -1"
+                         ng-style="exam.status === 2? {backgroundColor: '#C12E2A'} :
                                exam.status === 1 ?{backgroundColor: '#DCB40A'} : {backgroundColor: '#A7D800'}">
-                </div>
-                <h5><b>{{exam.name}}</b></h5>
-                <hr>
-                <div class="info-card">
-                    <small>
+                    </div>
+                    <h5><b>{{exam.name}}</b></h5>
+                    <hr>
+                    <div class="info-card">
                         <small>
+                            <small>
                             <span>
                                 Date: {{exam.status !== -1 ? exam.date : ''| date}}
                             </span>
-                        </small>
-                        <br>
-                        <small>
+                            </small>
+                            <br>
+                            <small>
                             <span>
                                 Status: {{getStatus(exam.status)}}
                             </span>
+                            </small>
                         </small>
-                    </small>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
+    <div class="card">
+        <h3>Intrusive</h3>
+        <div class="exam-container">
+            <div class="single-exam-container" ng-repeat="exam in currentPatient.exams[1]">
+                <div class="exam" ng-click="seeExam(exam)">
+                    <div class="bubble" ng-show="exam.status !== -1"
+                         ng-style="exam.status === 2? {backgroundColor: '#C12E2A'} :
+                               exam.status === 1 ?{backgroundColor: '#DCB40A'} : {backgroundColor: '#A7D800'}">
+                    </div>
+                    <h5><b>{{exam.name}}</b></h5>
+                    <hr>
+                    <div class="info-card">
+                        <small>
+                            <small>
+                            <span>
+                                Date: {{exam.status !== -1 ? exam.date : ''| date}}
+                            </span>
+                            </small>
+                            <br>
+                            <small>
+                            <span>
+                                Status: {{getStatus(exam.status)}}
+                            </span>
+                            </small>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -3,9 +3,7 @@
 
     mod.controller( 'historyCtrl', [ '$scope',
         function ( $scope ) {
-            $scope.togglePatientData = function () {
-                $( '#patient_data' ).toggleClass( 'panel-anim-in' );
-            };
+
         }
     ] );
 })( angular );

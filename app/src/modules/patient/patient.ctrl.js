@@ -1,7 +1,7 @@
 (function ( ng ) {
     let mod = ng.module( 'patientModule' );
 
-    mod.controller( 'patientsCtrl', [ '$scope', '$state', 'Data','PatientData',
+    mod.controller( 'patientsCtrl', [ '$scope', '$state', 'Data', 'PatientData',
         function ( $scope, $state, Data, PatientData ) {
 
             //TODO
@@ -192,7 +192,7 @@
             $scope.clickPatient = function ( pos ) {
                 Data.data = {};
                 let patient = $scope.patients[ pos ];
-                PatientData.setPatient(null);
+                PatientData.setPatient( null );
                 $state.go( 'patient', { id: patient.id } );
             };
         }

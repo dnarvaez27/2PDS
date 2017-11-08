@@ -480,7 +480,7 @@ hr {
     padding: 15px;
 }
 
-.history-cards-container{
+.history-cards-container {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-gap: 5px;
@@ -493,4 +493,15 @@ hr {
 .panel-anim {
     transition: all 1s ease;
     visibility: hidden;
+}
+
+.img-diagnosis {
+    background: url('../imgs/diagnosis.png') no-repeat center;
+    background-size: cover;
+    height: 80%;
+    width: 100%;
+}
+
+.diagnosis-container {
+    padding: 15px;
 }

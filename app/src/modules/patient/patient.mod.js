@@ -3,7 +3,7 @@
 
     mod.config( [ '$stateProvider', '$urlRouterProvider',
                     function ( $stateProvider, $urlRouterProvider ) {
-                        // $urlRouterProvider.otherwise( '/patients' );
+                        $urlRouterProvider.otherwise( '/patients' );
 
                         $stateProvider
                             .state( 'patients', {
@@ -37,16 +37,6 @@
                                     }
                                 }
                             } )
-                            .state( 'patientExams', {
-                                url: '/exams',
-                                parent: 'patient',
-                                views: {
-                                    'patientView': {
-                                        templateUrl: 'app/src/modules/patient/detail/exams/exams.html',
-                                        controller: 'examsCtrl'
-                                    }
-                                }
-                            } )
                             .state( 'patientHistory', {
                                 url: '/history',
                                 parent: 'patient',
@@ -54,6 +44,16 @@
                                     'patientView': {
                                         templateUrl: 'app/src/modules/patient/detail/history/history.html',
                                         controller: 'historyCtrl'
+                                    }
+                                }
+                            } )
+                            .state( 'patientExams', {
+                                url: '/exams',
+                                parent: 'patient',
+                                views: {
+                                    'patientView': {
+                                        templateUrl: 'app/src/modules/patient/detail/exams/exams.html',
+                                        controller: 'examsCtrl'
                                     }
                                 }
                             } )

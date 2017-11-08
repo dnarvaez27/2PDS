@@ -375,13 +375,13 @@
                 $state.go( 'patientDiagnosis' );
             };
 
-            $scope.seeHistory();
+            // $scope.seeHistory();
 
             //TODO
             function search( id ) {
                 let rta = null;
                 users.some( function ( item ) {
-                    if ( item.id == id ) {
+                    if ( parseInt( item.id ) === parseInt( id ) ) {
                         rta = item;
                         return true;
                     }

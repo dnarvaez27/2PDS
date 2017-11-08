@@ -1,1 +1,4 @@
-<div class="full-size pre-scrollable style-2" ui-view="patientView"></div>
+<div class="full-size pre-scrollable style-2" ui-view="patientView">
+    <div class="full-size" ng-include="'app/src/modules/patient/detail/history/history.html'"
+         ng-controller="historyCtrl"></div>
+</div>

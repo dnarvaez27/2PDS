@@ -35,6 +35,9 @@
     <script type="text/javascript" src="app/src/modules/patient/patient.mod.js"></script>
     <script type="text/javascript" src="app/src/modules/patient/patient.ctrl.js"></script>
     <script type="text/javascript" src="app/src/modules/patient/detail/patients.detail.ctrl.js"></script>
+    <script type="text/javascript" src="app/src/modules/patient/detail/exams/exams.ctrl.js"></script>
+    <script type="text/javascript" src="app/src/modules/patient/detail/history/history.ctrl.js"></script>
+    <script type="text/javascript" src="app/src/modules/patient/detail/diagnosis/diagnosis.ctrl.js"></script>
     <script type="text/javascript" src="app/src/app.js"></script>
 
 </head>
@@ -53,6 +56,7 @@
         <div class="full-size" id="mainView" ui-view="mainView"></div>
     </div>
 
+    <div id="snackbar"></div>
     <div id="modal" class="modal fade" role="dialog">
         <div ng-include="dialogsrc">
         </div>

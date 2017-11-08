@@ -6,5 +6,12 @@
         <p>{{currentPatient.rh}}</p>
         <a href="callto:{{currentPatient.phone}}">{{currentPatient.phone}}</a><br>
         <a href="mailto:{{currentPatient.mail}}">{{currentPatient.mail}}</a>
+
+        <div class="patien-detail-buttons-container sidebar-buttons">
+            <button class="btn btn-default" ng-click="seeHistory()">Clinical History</button>
+            <button class="btn btn-default" ng-click="seeExams()">Exams</button>
+            <button class="btn btn-default" ng-click="seeDiagnosis()">Diagnosis</button>
+        </div>
+
     </div>
 </div>

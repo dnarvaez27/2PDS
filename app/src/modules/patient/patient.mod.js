@@ -28,12 +28,42 @@
                                 },
                                 views: {
                                     'profileView': {
-                                        templateUrl: 'app/src/modules/patient/detail/patients.detail.html',
+                                        templateUrl: 'app/src/modules/patient/detail/patient.html',
                                         controller: 'patientDetailCtrl'
                                     },
                                     'sidebarView': {
                                         templateUrl: 'app/src/modules/patient/detail/patients.detail.sidebar.html',
                                         controller: 'patientDetailCtrl'
+                                    }
+                                }
+                            } )
+                            .state( 'patientExams', {
+                                url: '/exams',
+                                parent: 'patient',
+                                views: {
+                                    'patientView': {
+                                        templateUrl: 'app/src/modules/patient/detail/exams/exams.html',
+                                        controller: 'examsCtrl'
+                                    }
+                                }
+                            } )
+                            .state( 'patientHistory', {
+                                url: '/history',
+                                parent: 'patient',
+                                views: {
+                                    'patientView': {
+                                        templateUrl: 'app/src/modules/patient/detail/history/history.html',
+                                        controller: 'historyCtrl'
+                                    }
+                                }
+                            } )
+                            .state( 'patientDiagnosis', {
+                                url: '/diagnosis',
+                                parent: 'patient',
+                                views: {
+                                    'patientView': {
+                                        templateUrl: 'app/src/modules/patient/detail/diagnosis/diagnosis.html',
+                                        controller: 'diagnosisCtrl'
                                     }
                                 }
                             } );

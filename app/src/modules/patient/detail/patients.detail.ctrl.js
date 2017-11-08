@@ -1,8 +1,8 @@
 (function ( ng ) {
     let mod = ng.module( 'patientModule' );
 
-    mod.controller( 'patientDetailCtrl', [ '$scope', '$stateParams', 'PatientData',
-        function ( $scope, $stateParams, PatientData ) {
+    mod.controller( 'patientDetailCtrl', [ '$scope', '$stateParams', 'PatientData', '$state',
+        function ( $scope, $stateParams, PatientData, $state ) {
             // TODO
             let users = [ {
                 'name': 'Charyl Kirton',
@@ -218,127 +218,144 @@
 
             let temp = search( $stateParams.id );
             temp.age = 24;
+            temp.address = 'Calle 19 # 1-46';
+            temp.city = 'Bogotá';
+            temp.birth = new Date();
             temp.rh = 'A+';
             temp.phone = '+57 555-55-555';
             temp.mail = 'pac@email.com';
             temp.type = 'P1';
+            temp.status = {
+                height: 178,
+                weight: 64,
+                race: 'Caucasian'
+            };
             temp.exams = [
                 [
                     {
-                        name: "Oximetría de pulso",
-                        status :0,
-                        results: {PRbpm:28, SpO2: 120},
+                        name: 'Oximetría de pulso',
+                        status: 0,
+                        results: { PRbpm: 28, SpO2: 120 },
                         date: new Date(),
-                        file: "oximetria.html"
+                        file: 'oximetria.html'
                     },
                     {
-                        name: "Rayos X de Tórax",
-                        status : 1,
+                        name: 'Rayos X de Tórax',
+                        status: 1,
                         results: {},
                         date: new Date(),
-                        file: ""
+                        file: ''
                     },
                     {
-                        name: "Electrocardiograma (EKG)",
-                        status :2,
+                        name: 'Electrocardiograma (EKG)',
+                        status: 2,
                         results: {},
                         date: new Date(),
-                        file: ""
+                        file: ''
                     },
                     {
-                        name: "Ecocardiograma (ECG, ultrasonido cardiaco o sonograma)",
-                        status :2,
-                        results: {freq_card: 60, ritm_card: 128, incl_cor: 12, hallazgos: { hipertrofia: false, crec_auriculas: true, ventriculos: true}},
+                        name: 'Ecocardiograma (ECG, ultrasonido cardiaco o sonograma)',
+                        status: 2,
+                        results: {
+                            freq_card: 60,
+                            ritm_card: 128,
+                            incl_cor: 12,
+                            hallazgos: { hipertrofia: false, crec_auriculas: true, ventriculos: true }
+                        },
                         date: new Date(),
-                        file: "ecg.html"
+                        file: 'ecg.html'
                     },
                     {
-                        name: "Espirometría	",
-                        status :2,
-                        results: {vol_corr: 132, vol_ins: 45, vol_esp: 38},
+                        name: 'Espirometría	',
+                        status: 2,
+                        results: { vol_corr: 132, vol_ins: 45, vol_esp: 38 },
                         date: new Date(),
-                        file: "espirometria.html"
+                        file: 'espirometria.html'
                     },
                     {
-                        name: "Caminata de 6 minutos",
-                        status :1,
+                        name: 'Caminata de 6 minutos',
+                        status: 1,
                         results: {},
                         date: new Date(),
-                        file: ""
+                        file: ''
                     },
                     {
-                        name: "Doppler o Triplex Arterial Venoso",
-                        status :-1,
+                        name: 'Doppler o Triplex Arterial Venoso',
+                        status: -1,
                         results: {},
                         date: new Date(),
-                        file: ""
+                        file: ''
                     }
                 ],
                 [
                     {
-                        name: "Ecocardiograma Transesofágico",
-                        status:  -1,
+                        name: 'Ecocardiograma Transesofágico',
+                        status: -1,
                         results: {},
                         date: new Date(),
-                        file : ""
+                        file: ''
                     },
                     {
-                        name: "Gammagrafía pulmonar de ventilación/perfusión",
-                        status:  -1,
+                        name: 'Gammagrafía pulmonar de ventilación/perfusión',
+                        status: -1,
                         results: {},
                         date: new Date(),
-                        file : ""
+                        file: ''
                     },
                     {
-                        name: "Tomografía Axial Computarizada de Tórax (TAC)",
-                        status:  -1,
+                        name: 'Tomografía Axial Computarizada de Tórax (TAC)',
+                        status: -1,
                         results: {},
                         date: new Date(),
-                        file : ""
+                        file: ''
                     },
                     {
-                        name: "Imagen por Resonancia Magnética",
-                        status:  -1,
+                        name: 'Imagen por Resonancia Magnética',
+                        status: -1,
                         results: {},
                         date: new Date(),
-                        file : ""
+                        file: ''
                     },
                     {
-                        name: "Cateterismo cardíaco derecho	",
-                        status:  -1,
+                        name: 'Cateterismo cardíaco derecho	',
+                        status: -1,
                         results: {},
                         date: new Date(),
-                        file : ""
+                        file: ''
                     },
                     {
-                        name: "Arteriografía pulmonar",
-                        status:  1,
+                        name: 'Arteriografía pulmonar',
+                        status: 1,
                         results: {},
                         date: new Date(),
-                        file : ""
+                        file: ''
                     },
                     {
-                        name: "Determinación de Clase Funcional",
-                        status:  -1,
+                        name: 'Determinación de Clase Funcional',
+                        status: -1,
                         results: {},
                         date: new Date(),
-                        file : ""
+                        file: ''
                     },
                     {
-                        name: "Exámenes genéticos",
-                        status:  -1,
+                        name: 'Exámenes genéticos',
+                        status: -1,
                         results: {},
                         date: new Date(),
-                        file : ""
+                        file: ''
                     },
                     {
-                        name: "Biopsia de pulmón",
-                        status:  -1,
+                        name: 'Biopsia de pulmón',
+                        status: -1,
                         results: {},
                         date: new Date(),
-                        file : ""
+                        file: ''
                     }
                 ]
+            ];
+            temp.history = [
+                { date: new Date(), type: 'Urgency', description: 'Problems to breathe' },
+                { date: new Date(), type: 'Specialist', description: 'Pulmonologist' }
             ];
 
             if ( !temp.img || temp.img === '' ) {
@@ -348,29 +365,17 @@
             PatientData.setPatient( temp );
             $scope.currentPatient = PatientData.patient;
 
-            $scope.getStatus = function ( num ) {
-                switch ( num ) {
-                    case -1:
-                        return 'Not Registered';
-                        break;
-                    case 0:
-                        return 'Sucess';
-                        break;
-                    case 1:
-                        return 'Pending';
-                        break;
-                    case 2:
-                        return 'Fail';
-                        break;
-                }
+            $scope.seeExams = function () {
+                $state.go( 'patientExams' );
+            };
+            $scope.seeHistory = function () {
+                $state.go( 'patientHistory' );
+            };
+            $scope.seeDiagnosis = function () {
+                $state.go( 'patientDiagnosis' );
             };
 
-            $scope.seeExam = function ( obj ) {
-                $scope.$parent.$parent.getStatus = $scope.getStatus;
-                $scope.$parent.$parent.examen = obj;
-                $scope.$parent.$parent.dialogsrc = 'app/src/modules/patient/detail/patient.modal.html';
-                $( '#modal' ).modal( 'show' );
-            };
+            $scope.seeHistory();
 
             //TODO
             function search( id ) {

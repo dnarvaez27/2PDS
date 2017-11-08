@@ -1,0 +1,71 @@
+<div class="full-size history-content">
+
+    <!--<h1><a ng-click="togglePatientData()">Patient Data</a></h1>-->
+    <!--<h1>{{currentPatient.name}}</h1>-->
+    <div class="history-cards-container">
+        <div class="card">
+            <h3>Historical</h3>
+            <table class="table">
+                <tr>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+                <tr ng-repeat="event in currentPatient.history">
+                    <td>{{event.date | date}}</td>
+                    <td>{{event.type}}</td>
+                    <td>{{event.description}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="patient_data" class="card">
+            <div class="form-group">
+                <label for="id">ID</label>
+                <input class="form-control" id="id" ng-value="currentPatient.id">
+            </div>
+
+            <div class="form-group">
+                <label for="birth">Birth</label>
+                <input type="date" class="form-control" id="birth" ng-model="currentPatient.birth">
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input class="form-control" id="address" ng-value="currentPatient.address">
+            </div>
+
+            <div class="form-group">
+                <label for="city">City</label>
+                <input class="form-control" id="city" ng-value="currentPatient.city">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input class="form-control" id="phone" ng-value="currentPatient.phone">
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <input class="form-control" id="gender" ng-value="currentPatient.gender">
+            </div>
+
+            <div class="form-group">
+                <label for="race">Race</label>
+                <input class="form-control" id="race" ng-value="currentPatient.status.race">
+            </div>
+
+            <div>
+                <div class="form-group">
+                    <label for="height">Height</label>
+                    <input class="form-control" id="height" ng-value="currentPatient.status.height">
+                </div>
+
+                <div class="form-group">
+                    <label for="weight">Weight</label>
+                    <input class="form-control" id="weight" ng-value="currentPatient.status.weight">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

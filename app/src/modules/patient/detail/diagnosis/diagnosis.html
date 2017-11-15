@@ -1,4 +1,33 @@
 <div class="full-size diagnosis-container">
     <h4>El siguiente árbol muestra las probabilidades de la presencia de enfermedades (Subcategorías) de HTP</h4>
-    <div class="img-responsive img-diagnosis"></div>
+    <!--<div class="img-responsive img-diagnosis"></div>-->
+    <h1>Categories</h1>
+    <div id="categories-progresses" class="categories-container">
+        <div class="categories-item thumbnail" ng-repeat="category in diagnosis.categories">
+            <h3>{{category.label}}</h3>
+            <round-progress
+                    value="{{ category.score * 100}}"
+                    radio=50"
+                    stroke="10"
+                    ng-style="{color: category.color.background}"
+                    data="{{ category }}"
+            ></round-progress>
+
+        </div>
+    </div>
+
+    <h1>Concepts</h1>
+    <div id="concepts-progresses" class="concepts-container">
+        <div class="concept-item thumbnail" ng-repeat="concept in diagnosis.concepts"
+             on-timeline-render="conceptsRenderDone">
+            <h3>{{concept.text}}</h3>
+            <round-progress
+                    value="{{ concept.relevance * 100}}"
+                    radio=50"
+                    stroke="10"
+                    ng-style="{color: '#09696'}"
+                    data="{{ concept }}"
+            ></round-progress>
+        </div>
+    </div>
 </div>

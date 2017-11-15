@@ -1,6 +1,8 @@
 (function ( ng ) {
     let mod = ng.module( 'patientModule', [ 'ui.router' ] );
 
+    mod.directive( 'onTimelineRender', event() );
+
     mod.config( [ '$stateProvider', '$urlRouterProvider',
                     function ( $stateProvider, $urlRouterProvider ) {
                         $urlRouterProvider.otherwise( '/patients' );

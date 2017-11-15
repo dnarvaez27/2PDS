@@ -505,3 +505,36 @@ hr {
 .diagnosis-container {
     padding: 15px;
 }
+
+.categories-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    text-align: center;
+}
+
+.categories-item {
+    padding: 20px;
+}
+
+.concepts-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    text-align: center;
+}
+
+.concept-item {
+    padding: 20px;
+}
+
+.progress-round-habilidades {
+    display: grid;
+    text-align: center;
+    padding: 5px;
+}
+
+
+round-progress{
+    color: red !important;
+}

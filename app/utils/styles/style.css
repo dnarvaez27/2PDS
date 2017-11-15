@@ -534,7 +534,46 @@ hr {
     padding: 5px;
 }
 
-
-round-progress{
+round-progress {
     color: red !important;
+}
+
+.diagnosis-text-modal {
+    width: 50%;
+}
+
+.body-modal-diagnosis {
+    padding: 30px;
+    line-height: 25px;
+    margin-right: 5px;
+}
+
+.text-diagnosis {
+    font-size: 15px;
+}
+
+.learn-more-diagnosis-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.result-container {
+    padding: 20px;
+}
+
+.categories-item > h3{
+    text-transform: capitalize;
+}
+
+.loader {
+    background: url('../imgs/loader.gif') no-repeat center;
+    background-size: auto;
+    position: fixed;
+    height: 80%;
+    width: 70%;
+}
+
+.formulario-diagnostico {
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr;
 }

@@ -63,7 +63,8 @@
         } );
     }
 
-    app.config( [ '$qProvider', function ( $qProvider ) {
+    app.config( [ '$qProvider', '$httpProvider', function ( $qProvider, $httpProvider ) {
         $qProvider.errorOnUnhandledRejections( false );
+        $httpProvider.defaults.withCredentials = true;
     } ] );
 })( window.angular );

@@ -1,0 +1,19 @@
+<div class="modal-dialog diagnosis-text-modal">
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Highlights</h4>
+        </div>
+        <div class="modal-body pre-scrollable style-2 body-modal-diagnosis">
+            <ul>
+                <li class="text-diagnosis" ng-repeat="h in highlights">
+                    {{h}}
+                </li>
+            </ul>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+</div>
